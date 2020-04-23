@@ -1,7 +1,7 @@
 
 # JavaScipt的七种数据类型
 ## 初步认识
-JavaScript中数据类型分别有Number,Boolean,String,Null,Undefiend,Symbol,Object，其中前六种数据类型为基本数据类型，Object为引用数据类型。
+>JavaScript中数据类型分别有Number,Boolean,String,Null,Undefiend,Symbol,Object，其中前六种数据类型为基本数据类型，Object为引用数据类型。
 - 引用数据类型在栈内存中存放的是地址，具体数据存放在堆内存中。访问引用数据类型时，传递的是地址中对应的值，所以从函数中修改引用数据类型会导致全局中的同名数据类型被修改；
 
 - 基本数据类型在栈内存中存放的是值，访问基本数据类型时采取就近原则，方法结束局部变量也会被释放。
@@ -13,16 +13,16 @@ JavaScript中数据类型分别有Number,Boolean,String,Null,Undefiend,Symbol,Ob
 - 引用数据类型开始是不确定需要多少空间大小的，超过栈空间大小就会运行失败。所以出现了堆内存，在堆内存中可以在上限内随意分配内存大小，就形成了在栈内存中存放地址，在堆内存中存放数据。
 
 ## 简单认识
-### number
+### number 数值型
 
-### boolean
+### boolean 布尔型
 
-### string
+### string 字符串型
+
+### null 空
 
 ### undefined
 
-### null
+### symbol （ES6引入）
 
-### symbol
-
-### Object
+### Object 对象（数组、函数等）
