@@ -2,7 +2,7 @@
 
 ## position
 - 用于指定一个元素在文档中的定位方式
-### 属性：
+### 属性值：
 
 1. static（默认值）
 > 对象遵循常规流，此时4个定位偏移属性不会被应用。
@@ -10,8 +10,8 @@
 <style>
 #div {
 	position: static;
-	top: 50%;/*不会被应用*/
-  border: #000000 solid 3px;/*宽度100%，高度为内容高度*/
+  	top: 50%;/*不会被应用*/
+  	border: #000000 solid 3px;/*宽度100%，高度为内容高度*/
 }
 </style>
 ```
@@ -24,7 +24,7 @@
 #div {
 	position: relative;
 	top: 50%;/*会被应用*/
-  border: #000000 solid 3px;/*同static*/
+	border: #000000 solid 3px;/*同static*/
 }
 </style>
 ```
@@ -37,7 +37,7 @@
 #div {
 	position: absolute;
 	top: 50%;/*会被应用*/
-  border: #000000 solid 3px;/*div块元素宽度和变成内容宽度，不再是100%*/
+	border: #000000 solid 3px;/*div块元素宽度和变成内容宽度，不再是100%*/
 }
 </style>
 ```
@@ -49,7 +49,7 @@
 #div {
 	position: fixed;
 	top: 50%;/*会被应用*/
-  border: #000000 solid 3px;/*同absolute*/
+	border: #000000 solid 3px;/*同absolute*/
 }
 </style>
 ```
@@ -60,8 +60,8 @@
 //可以用作吸顶菜单栏，当
 <style>
 body{
-height: 3000px;
-border: #000000 solid 3px;
+	height: 3000px;
+	border: #000000 solid 3px;
 }
 #dv1 {
 	position: sticky;
