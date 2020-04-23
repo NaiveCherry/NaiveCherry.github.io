@@ -12,16 +12,17 @@ JavaScript中数据类型分别有Number,Boolean,String,Null,Undefiend,Symbol,Ob
 
 - 引用数据类型开始是不确定需要多少空间大小的，超过栈空间大小就会运行失败。所以出现了堆内存，在堆内存中可以在上限内随意分配内存大小，就形成了在栈内存中存放地址，在堆内存中存放数据。
 
-## number
+## 简单认识
+### number
 
-## boolean
+### boolean
 
-## string
+### string
 
-## undefined
+### undefined
 
-## null
+### null
 
-## symbol
+### symbol
 
-## Object
+### Object
