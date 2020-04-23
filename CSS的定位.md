@@ -10,8 +10,8 @@
 ```html
 #div {
 	position: static;
-  	top: 50%;/*不会被应用*/
-  	border: #000000 solid 3px;/*宽度100%，高度为内容高度*/
+  	top: 50%;	/*不会被应用*/
+  	border: #000000 solid 3px;	/*宽度100%，高度为内容高度*/
 }
 ```
 
@@ -22,8 +22,8 @@
 ```html
 #div {
 	position: relative;
-	top: 50%;/*会被应用*/
-	border: #000000 solid 3px;/*同static*/
+	top: 50%;	/*会被应用*/
+	border: #000000 solid 3px;	/*同static*/
 }
 ```
 
@@ -34,8 +34,8 @@
 ```html
 #div {
 	position: absolute;
-	top: 50%;/*会被应用*/
-	border: #000000 solid 3px;/*div块元素宽度和变成内容宽度，不再是100%*/
+	top: 50%;	/*会被应用*/
+	border: #000000 solid 3px;	/*div块元素宽度和变成内容宽度，不再是100%*/
 }
 ```
 
@@ -45,8 +45,8 @@
 ```html
 #div {
 	position: fixed;
-	top: 50%;/*会被应用*/
-	border: #000000 solid 3px;/*同absolute*/
+	top: 50%;	/*会被应用*/
+	border: #000000 solid 3px;	/*同absolute*/
 }
 ```
 
@@ -54,7 +54,7 @@
 > 对象在常态时遵循常规流。它就像是relative和fixed的合体，当在屏幕中时按常规流排版时为相对定位，当到屏幕外时相当于fixed绝对定位，该属性的表现是现实中你见到的吸附效果。
 
 ```html
-//可以用作吸顶菜单栏，当
+//可以用作吸顶菜单栏
 body{
 	height: 3000px;
 	border: #000000 solid 3px;
@@ -62,8 +62,8 @@ body{
 #dv1 {
 	position: sticky;
 	border: #000000 solid 3px;
-	margin-top: 80px;/*当div移出屏幕外时无效*/
-	top: 0px;/*当div移出屏幕外时生效*/
+	margin-top: 80px;	/*当div移出屏幕外时无效*/
+	top: 0px;	/*当div移出屏幕外时生效*/
 }
 ```
 
