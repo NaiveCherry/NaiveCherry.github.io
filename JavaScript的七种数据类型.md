@@ -21,7 +21,7 @@
 
 ### null 空
 
-### undefined
+### undefined 未定义
 
 ### symbol （ES6引入）
 
