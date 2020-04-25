@@ -8,8 +8,9 @@
 
 
 ## CSS知识点
+- [CSS的基础知识](https://naivecherry.github.io/CSS的基础知识)
 - [CSS的定位](https://naivecherry.github.io/CSS的定位)
-- 
+
 
 ## JavaScript知识点
 - <a href="https://naivecherry.github.io/JavaScript的八种数据类型">JavaScript的八种数据类型</a>
