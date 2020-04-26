@@ -79,11 +79,14 @@ javascript中注释：
 >
 <br/>
 
-## mate标签 （不仅仅可以用作声明字符编码）
+## mate标签 元元素/元数据（不仅仅可以用作声明字符编码）
+> 功能太多列举常用、实用的
 ```html
 <mata name="keywords" content="关键字名称,关键字名称……">	<!--有利于SEO。-->
 <mate name="describe" content="描述网站文字">		<!--在搜索结果显示网站时旁边的描述性文字-->
+<meta name="description">	<!-- 移动端适配窗口 -->
 <mate http-equiv="refresh" content="秒数,url=网址">	<!--在经过设定秒数后跳转到url的网址，叫做重定向-->
+<mate http-equiv>	<!--能力不够后续展开-->
 ```
 
 <br/>
