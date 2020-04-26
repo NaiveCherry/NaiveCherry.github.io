@@ -8,7 +8,7 @@
 
 
 ## CSS知识点
-- [CSS的基础知识](https://naivecherry.github.io/CSS的基础知识)
+- [CSS的基础笔记1](https://naivecherry.github.io/CSS的基础笔记1)
 - [CSS的定位](https://naivecherry.github.io/CSS的定位)
 
 
