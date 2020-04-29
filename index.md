@@ -13,14 +13,21 @@
 - [CSS的定位](https://naivecherry.github.io/CSS的定位)
 
 
-## JavaScript知识点
+## JavaScript知识点（ES6之前版本）
 - <a href="https://naivecherry.github.io/JavaScript的八种数据类型">JavaScript的八种数据类型</a>
 - [JavaScript初级的选择排序和冒泡排序的理解](https://naivecherry.github.io/JavaScript初级的选择排序和冒泡排序的理解)
 
+## ES6版本对JavaScript的补充
+
 ## jQuery知识点
 
+## Vue知识点
+
+##  Bootstrap知识点
 
 ## Node.js知识点
+
+## Webpack知识点
 
 ## 其他知识点
 - [绝对路径和相对路径](https://naivecherry.github.io/绝对路径和相对路径)
