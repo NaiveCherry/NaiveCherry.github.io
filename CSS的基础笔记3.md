@@ -73,10 +73,10 @@ clear是清除浮动元素对当前元素的影响，也可以间接解决高度
 
 <br/>
 
-### 衍生的奇怪用法 claerfix
+### 衍生的奇怪用法 clearfix
 ```html
 <style>
-claerfix::before,clerarfix::after{
+clearfix::before,clearfix::after{
     content:'';   /*添加空字符*/
     display:tabel;    /*添加的内容设置为表格元素，解决垂直布局外边距折叠的问题*/
     clear:both    /*清除浮动效果，解决高度塌陷问题*/
