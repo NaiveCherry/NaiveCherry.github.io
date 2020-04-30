@@ -102,7 +102,7 @@ clearfix::before,clearfix::after{
 ### 属性值
 - static
 > 默认值，静止的，没有开启定位
--relative
+- relative
 > 开启元素的相对定位
 - absolute
 > 开启元素的绝对定位
