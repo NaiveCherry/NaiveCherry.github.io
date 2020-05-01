@@ -68,6 +68,7 @@ background-repeat 背景的重复方式
 - repeat-y 沿着y轴重复
 - no-repeat 背景图片不重复
 
+> 可以通过重复做到一个像素宽/高的渐变完成一条渐变栏，或者一张小图片达到有规律的大图片效果。
 <br/>
 
 background-position 用来设置背景图片的位置
