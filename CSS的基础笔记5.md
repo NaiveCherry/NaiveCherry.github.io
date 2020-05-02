@@ -55,9 +55,11 @@ background-image 背景图片
     background-image: url(../img/1.png);
 </style>
 ```
-> 可以同时设置背景图片和背景颜色，如果图片是透明的，那背景颜色就可以成为背景色。
-> 如果图片小于元素，则背景图片会自动平铺，铺满屏幕
-> 如果背景的图片大于元素，图片会无法完全显示
+- 可以同时设置背景图片和背景颜色，如果图片是透明的，那背景颜色就可以成为背景色。
+- 如果图片小于元素，则背景图片会自动平铺，铺满屏幕
+- 如果背景的图片大于元素，图片会无法完全显示
+
+> 可以通过设置不同状态切换不同的背景图片来模拟做到一些动画显示效果，但是图片是外部资源，外部资源是按需加载，如果第一次网速太慢图片切换会不连贯，缓存后就正常显示了，所以用雪碧图来一次加载。
 
 <br/>
 
@@ -83,12 +85,97 @@ background-position 用来设置背景图片的位置
 </style>
 ```
 
+> 雪碧图中常常会用到，通过设置x、y轴的值，x负数向右移动，y轴负数向下移动等操作，取要用的部分左上角的坐标，解决图片加载时不好的用户体验。
+
 <br/>
 
-backgroun-clip 设置背景的位置
+backgroun-clip 设置背景在容器中的显示方式
 ------
 - border-box 默认值，背景会出现在边框的下面
 - padding-box 背景不会出现在边框，只出现在内容区和内边距
 - content-box 背景只会出现在内容区
 
-background-origin 背景图片的偏移量计算的原点
+background-origin 背景图片的偏移量计算的原点（设置从什么地方开始显示图片）
+- padding-box 默认值，background-position从内边距处开始计算
+- content-box 背景图片的偏移量从内容区处开始计算
+- border-box 背景图片的偏移量从边框开始计算
+
+background-size 设置背景图片的大小
+- cover 图片比例不变，将元素铺满，内容可能会显示不全
+- contain 保持图片比例不变，将图片在元素完整显示
+- 其他值：
+```html
+<style>
+    background-size: 200px 200px;       /* 第一个值为设置宽度，第二个设置高度 */
+    background-size: 200px;     /* 第一个值是宽度，第二个值保持图片宽高比自动设置 */
+    background-size: 100% 100%;     /* 按比例显示 */
+    background-size: 100% auto;      /* 设置其中一个值为比例，另一个值保持宽高比自动设置 */
+<style>
+```
+
+background-attachment 设置背景图片是否跟随元素移动（用的较少）
+- scroll 默认值，背景图片跟随元素移动
+- fixed 背景图片会固定在页面中
+
+> background 背景简写属性，所有背景相关样式都可以通过该样式来设置，可以写任意个值，没有顺序要求，但是size值必须在position值后面用/隔开，clip值必须在origin值后面，没有必须要写的属性。
+
+```html
+<style>
+    background: center center/contain no-repeat;       /* 第一个值是position的x轴，第二个是y轴，斜杠后面的是size属性值，第四个值是不重复 */
+    background: border-box content-box;     /* 第一个值是origin值，第二个是clip的值，如果只写一个就是表示origin */
+</style>
+```
+
+雪碧图
+------
+> 多张小图组成的一张大图，为了解决请求多次加载造成闪烁，给用户不好的体验，而把小图组成大图一次加载全部，通过设置元素大小，背景图片设置为雪碧图，通过background-position来做到雪碧图的显示。
+
+<br/>
+
+背景渐变
+------
+> 通过渐变可以设置一些复杂的背景颜色，可以实现从一个颜色到其他颜色过渡的效果，渐变是图片，需要通过background-imgae来设置，颜色从左到右依次平均分布显示。
+
+- line-gradient 线性渐变
+- repeating-line-gradient 重复渐变效果，需要配合手动指定分布情况，按照像素范围平铺。
+> no-repeat 背景重复效果对渐变的重复不起作用
+
+线性渐变的其他属性值
+- to left 从右到左
+- to right 从左到右
+- to bottom 从上到下
+- to top 从下到上
+- xdeg deg表示度数，可以通过角度调整
+- xturn turn表示圈数，1圈等于360°，类似角度。
+
+```html
+<style>
+    background-image: linear-gradient(red,yellow);      /* 从上往下颜色逐渐过渡 */
+    background-image: linear-gradient(to right,red,yellow);      /* 从左往右颜色逐渐过渡 */
+    background-image: linear-gradient(to right,red,yellow,#bfa);        /* 设置多个值，默认情况平均分布 */
+    background-image: linear-gradient(0deg,red,yellow);     /* 设置渐变方向的角度 */     
+    background-image: linear-gradient(to top right,red,yellow);         /* 渐变设置方向组合 */
+    background-image: linear-gradient(0.5turn,red,yellow);      /* 渐变旋转半圈 */
+</style>
+```
+
+手动指定线性渐变的分布情况
+```html
+<style>
+    background-image: linear-gradient(red 50px,yellow);      /* 红色延展到50像素开始开始向黄色渐变 */
+    background-image: linear-gradient(red 50px,yellow 100px);       /* 红色延展到50像素开始向黄色渐变,到100像素结束渐变  */
+    background-imgage：linear-gradient(red 0px,yellow 200px);        /* 如果像素是200像素高，那么这就是默认，红色从0开始往黄色渐变，到200像素结束 */
+</style>
+```
+
+- radial-gradient 径向渐变，从原点向外圈渐变
+> 默认情况下，径向渐变形状是根据形状来计算的圆心的，正方形对应的圆形，长方形对应的椭圆形。
+
+```
+<style>
+    background-image:radial-gradient(100px 100px,red,yellow);       /* 红色向黄色渐变到水平方向大小100px，垂直方向大小100px，其他地方都是黄色 */
+</style>
+```
+其他属性值
+- circle：正圆
+- ellipse：椭圆
