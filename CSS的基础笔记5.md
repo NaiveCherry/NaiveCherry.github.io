@@ -38,12 +38,11 @@ text-overflow
 
 > 不换行配合overflow和text-overflow可以做到一行文本超出区域隐藏用省略号替代。
 
+<br/>
+
 背景 background
 ---
-background-color 背景颜色
-------
-
-background-image 背景图片
+background-color 背景颜色和background-image 背景图片
 ------
 ```
 <style>
@@ -71,6 +70,7 @@ background-repeat 背景的重复方式
 - no-repeat 背景图片不重复
 
 > 可以通过重复做到一个像素宽/高的渐变完成一条渐变栏，或者一张小图片达到有规律的大图片效果。
+
 <br/>
 
 background-position 用来设置背景图片的位置
@@ -85,7 +85,7 @@ background-position 用来设置背景图片的位置
 </style>
 ```
 
-> 雪碧图中常常会用到，通过设置x、y轴的值，x负数向右移动，y轴负数向下移动等操作，取要用的部分左上角的坐标，解决图片加载时不好的用户体验。
+> 常常会用在雪碧图中，通过设置x、y轴的值，x负数向右移动，y轴负数向下移动等操作，取要用的部分左上角的坐标，解决图片加载时不好的用户体验。
 
 <br/>
 
@@ -95,12 +95,18 @@ backgroun-clip 设置背景在容器中的显示方式
 - padding-box 背景不会出现在边框，只出现在内容区和内边距
 - content-box 背景只会出现在内容区
 
+<br/>
+
 background-origin 背景图片的偏移量计算的原点（设置从什么地方开始显示图片）
+------
 - padding-box 默认值，background-position从内边距处开始计算
 - content-box 背景图片的偏移量从内容区处开始计算
 - border-box 背景图片的偏移量从边框开始计算
 
+<br/>
+
 background-size 设置背景图片的大小
+------
 - cover 图片比例不变，将元素铺满，内容可能会显示不全
 - contain 保持图片比例不变，将图片在元素完整显示
 - 其他值：
@@ -113,11 +119,18 @@ background-size 设置背景图片的大小
 <style>
 ```
 
+<br/>
+
 background-attachment 设置背景图片是否跟随元素移动（用的较少）
+------
 - scroll 默认值，背景图片跟随元素移动
 - fixed 背景图片会固定在页面中
 
-> background 背景简写属性，所有背景相关样式都可以通过该样式来设置，可以写任意个值，没有顺序要求，但是size值必须在position值后面用/隔开，clip值必须在origin值后面，没有必须要写的属性。
+<br/>
+
+background 背景简写属性
+------
+所有背景相关样式都可以通过该样式来设置，可以写多个值，没有顺序要求，但是size值必须在position值后面且中间用/隔开，clip值必须在origin值后面，没有必须要写的属性。
 
 ```html
 <style>
@@ -126,21 +139,35 @@ background-attachment 设置背景图片是否跟随元素移动（用的较少�
 </style>
 ```
 
+<br/>
+
 雪碧图
 ------
 > 多张小图组成的一张大图，为了解决请求多次加载造成闪烁，给用户不好的体验，而把小图组成大图一次加载全部，通过设置元素大小，背景图片设置为雪碧图，通过background-position来做到雪碧图的显示。
+
+```
+<style>
+div{
+    width: 200px;
+    height: 100px;      /* 设置元素大小 */
+    background-image:url(../img/1.png);     /* 把雪碧图作为背景 */
+    background-position: 50px 50px;     /* 用定位来显示雪碧图显示区域，显示区域左上角点的坐标是50 50 */
+}
+</style>
+```
 
 <br/>
 
 背景渐变
 ------
-> 通过渐变可以设置一些复杂的背景颜色，可以实现从一个颜色到其他颜色过渡的效果，渐变是图片，需要通过background-imgae来设置，颜色从左到右依次平均分布显示。
+> 通过渐变可以设置一些复杂的背景颜色，可以实现从一个颜色到其他颜色过渡的效果，渐变是图片，需要通过background-imgae来设置。
 
-- line-gradient 线性渐变
-- repeating-line-gradient 重复渐变效果，需要配合手动指定分布情况，按照像素范围平铺。
-> no-repeat 背景重复效果对渐变的重复不起作用
+## line-gradient 线性渐变
+> 默认情况下是一种颜色逐渐过渡到其他颜色，颜色从左到右依次平均分布显示。
 
-线性渐变的其他属性值
+<br/>
+
+线性渐变的属性值
 - to left 从右到左
 - to right 从左到右
 - to bottom 从上到下
@@ -159,6 +186,8 @@ background-attachment 设置背景图片是否跟随元素移动（用的较少�
 </style>
 ```
 
+<br/>
+
 手动指定线性渐变的分布情况
 ```html
 <style>
@@ -168,7 +197,12 @@ background-attachment 设置背景图片是否跟随元素移动（用的较少�
 </style>
 ```
 
-- radial-gradient 径向渐变，从原点向外圈渐变
+- repeating-line-gradient 重复渐变效果，需要配合手动指定分布情况，按照像素范围平铺。
+> no-repeat 背景重复效果对渐变的重复不起作用
+
+<br/>
+
+## radial-gradient 径向渐变，从原点向外圈渐变
 > 默认情况下，径向渐变形状是根据形状来计算的圆心的，正方形对应的圆形，长方形对应的椭圆形。
 
 ```
@@ -176,6 +210,15 @@ background-attachment 设置背景图片是否跟随元素移动（用的较少�
     background-image:radial-gradient(100px 100px,red,yellow);       /* 红色向黄色渐变到水平方向大小100px，垂直方向大小100px，其他地方都是黄色 */
 </style>
 ```
-其他属性值
+
+大小的属性值：
 - circle：正圆
 - ellipse：椭圆
+- closest-side：渐变延伸到最近的侧边停止
+- farthest-side：渐变延伸到最远的侧边停止
+- closest-corner：渐变延伸到最近的边角停止
+- farthest-corner：渐变延伸到最远的边角停止
+位置的属性值：
+- at x y：设置原点的坐标轴，x和y可以是center、top、left、right、bottom
+
+> 语法 radial-gradient（大小 at 位置，颜色 位置，颜色 位置，颜色位置）
