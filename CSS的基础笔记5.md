@@ -218,6 +218,7 @@ div{
 - farthest-side：渐变延伸到最远的侧边停止
 - closest-corner：渐变延伸到最近的边角停止
 - farthest-corner：渐变延伸到最远的边角停止
+<br/>
 位置的属性值：
 - at x y：设置原点的坐标轴，x和y可以是center、top、left、right、bottom
 
