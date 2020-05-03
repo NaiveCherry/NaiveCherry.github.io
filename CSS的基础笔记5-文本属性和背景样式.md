@@ -11,6 +11,7 @@ text-alingn 文本的水平对齐
 - justify 两端对齐
 
 vertical-alingn 元素的垂直对齐
+------
 - baseline 默认值，基线对齐
 - top 顶部对齐
 - bottom 底部对齐
