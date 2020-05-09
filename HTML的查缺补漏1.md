@@ -91,6 +91,35 @@ javascript中注释：
 
 <br/>
 
+## link标签
+> 常用于引入外部样式表、外部图标字体和图标的引入
+```html
+<link rel="stylesheet" href="css/reset.css">
+<!-- 引入图标字体 -->
+<link rel="stylesheet" href="../../font Awesome/css/all.css">
+<!-- 引入公共样式表 -->
+<link rel="stylesheet" href="css/base.css">
+<!-- 引入主页样式表 -->
+<link rel="stylesheet" href="css/index.css">
+<!-- 引入收藏夹和网页图标 -->
+<link rel="icon" href="img/favicon.ico">
+```
+
+<br/>
+
+## script标签
+> 用于写入JavaScript代码和引入外部JavaScript，引入了外部js的标签里的内容不生效。
+```
+<!-- 引入外部JavaScript -->
+<srcipt src="index.js"></script>
+<!-- 内部JavaScript -->
+<script>
+	window.onload = function(){}
+</script>
+```
+
+<br/>
+
 ## title标签
 > 不仅仅是网页选项卡的标题同时也是搜索结果的超链接文字
 
