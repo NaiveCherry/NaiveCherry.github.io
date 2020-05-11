@@ -70,6 +70,27 @@ transition-deley 过渡的延迟
 }
 ```
 <br/>
+```
+@keyframes test {   <!-- test表示关键帧名字 -->
+  from{
+    margin-top: 0px;
+  }
+  
+  20%,60%,to{  <!-- 同时设置多个阶段的动画 -->
+    margin-top: 400px;
+    animation-timing-function: ease-in;   <!-- 可以单独对某段动画设置属性 -->
+  }
+  
+  40%{
+    margin-top: 200px;
+  }
+  
+  80%{
+    margin-top: 100px
+  }
+}
+```
+<br/>
 
 animation-name 动画使用的名字
 ------
@@ -85,7 +106,7 @@ animation-duration 动画的执行时间
 
 animation-delay 动画的延迟
 ------
-> 动画经过一段时间后执行动画。
+> 动画经过一段时间后执行动画，可以对批量动画设置不同的延迟达到律动的效果。
 
 <br/>
 
@@ -124,5 +145,6 @@ animationg-fill-mode 动画的填充模式
 - backwards：动画延迟等待时，元素就会处于开始的状态。
 - both：具备backwards和forwards的特点。
 
+动画效果会有外边距折叠的问题，需要开启BFC<br/>
 简写属性animation和过渡类似，如果有延迟，要写在动画时间的后面，其他没有顺序要求。<br/>
 做sprite动画（雪碧图动画）时可以利用背景图片是重复的，图片中多少个动作就分多少步，对于背景图片定位x轴就是负图片的宽度。
