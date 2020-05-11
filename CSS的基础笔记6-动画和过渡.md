@@ -48,6 +48,10 @@ transition-deley 过渡的延迟
 
 动画 animation
 ---
+>动画和过渡区别在于过渡需要改变值时才有效果，动画可以直接运行，用法大致类似，但是必须要有关键帧。
+
+<br/>
+
 关键帧
 ------
 要设置动画效果，必须先设置一个关键帧，关键帧设置了动画执行的每一个步骤
@@ -90,11 +94,13 @@ animation-timing-function 动画的时序函数
 > 和延迟的使用方法一致
 
 <br/>
+
 animation-iteration-count 动画的迭代，代表动画执行的次数
 ------
 > 属性值可以写数字，或者infinite表示无限执行。
 
 <br/>
+
 animation-direction 动画运行的方向
 ------
 - normal：默认值，每次都是从from到to执行。
