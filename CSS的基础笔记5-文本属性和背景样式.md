@@ -194,7 +194,7 @@ div{
 <style>
     background-image: linear-gradient(red 50px,yellow);      /* 红色延展到50像素开始开始向黄色渐变 */
     background-image: linear-gradient(red 50px,yellow 100px);       /* 红色延展到50像素开始向黄色渐变,到100像素结束渐变  */
-    background-imgage：linear-gradient(red 0px,yellow 200px);        /* 如果像素是200像素高，那么这就是默认，红色从0开始往黄色渐变，到200像素结束 */
+    background-image：linear-gradient(red 0px,yellow 200px);        /* 如果像素是200像素高，那么这就是默认，红色从0开始往黄色渐变，到200像素结束 */
 </style>
 ```
 
