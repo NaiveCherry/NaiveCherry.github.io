@@ -12,10 +12,10 @@
 ```
 .box{
   width: 200px;
-  div{
+  div{	//对box中的div设置样式
     width: 150px;
     margin: 0 auto;
-    img{
+    img{	//对box中的div中的img设置样式
       width:100%;
     }
   }
