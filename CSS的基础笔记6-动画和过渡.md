@@ -56,13 +56,13 @@ transition-deley 过渡的延迟
 ------
 要设置动画效果，必须先设置一个关键帧，关键帧设置了动画执行的每一个步骤
 ```
-@keyframes test {   <!-- test表示关键帧名字 -->
-  <!-- from表示动画的开始位置,可以使用百分比 -->
+@keyframes test {   /* test表示关键帧名字 */
+  /* from表示动画的开始位置,可以使用百分比 */
   from{
     margin-left: 0px;
   }
   
-  <!-- to表示动画的结束位置，可以使用百分比 -->
+  /* to表示动画的结束位置，可以使用百分比 */
   to{
     margin-left: 700px;
   }
@@ -73,14 +73,14 @@ transition-deley 过渡的延迟
 <br/>
 
 ```
-@keyframes test {   <!-- test表示关键帧名字 -->
+@keyframes test {   /* test表示关键帧名字 */
   from{
     margin-top: 0px;
   }
   
-  20%,60%,to{  <!-- 同时设置多个阶段的动画 -->
+  20%,60%,to{  /* 同时设置多个阶段的动画 */
     margin-top: 400px;
-    animation-timing-function: ease-in;   <!-- 可以单独对某段动画设置属性 -->
+    animation-timing-function: ease-in;   /* 可以单独对某段动画设置属性 */
   }
   
   40%{
