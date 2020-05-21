@@ -116,7 +116,9 @@ width: 100px - 20px;
 
 sourceMap
 ---
-让调试显示的css行数改成对应的less行数
-1.先复制less介绍中有关sourceMap的"less.compile:"内容
+作用：让调试显示的css行数改成对应的less行数<br/>
+
+修改方法：
+1.先复制less介绍中有关sourceMap的"less.compile:"内容<br/>
 2.vscode的设置——>扩展——>Easy LESS configuration，点击Easy LESS configuration下面的“在settings.json中编辑” <br/>
 3.在最后一行代码后加逗号，换行粘贴之前复制的less.compile。把compres属性值改成false，把sourceMap改成true，out改成true。
