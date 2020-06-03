@@ -3,14 +3,14 @@
 text 文本属性
 ---
 
-text-alingn 文本的水平对齐
+text-align 文本的水平对齐
 ------
 - left 左对齐
 - right 右对齐
 - center 居中对齐
 - justify 两端对齐
 
-vertical-alingn 元素的垂直对齐
+vertical-align 元素的垂直对齐
 ------
 - baseline 默认值，基线对齐
 - top 顶部对齐
