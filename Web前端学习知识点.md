@@ -1,6 +1,5 @@
-# Web前端学习知识点
-
-## [个人简历](###)【未来补充】
+Web前端学习知识点
+---
 
 ## HTML知识点
 - [HTML的语义化标签](https://naivecherry.github.io/HTML的语义化标签)
