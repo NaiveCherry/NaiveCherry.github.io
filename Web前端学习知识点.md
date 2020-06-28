@@ -35,9 +35,6 @@
 
 ## Webpack知识点
 
-## 其他知识点
-- [绝对路径和相对路径](https://naivecherry.github.io/绝对路径和相对路径)
-
 
 
 
